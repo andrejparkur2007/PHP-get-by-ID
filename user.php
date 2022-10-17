@@ -1,6 +1,6 @@
 <?php
 $user_iddd = $_GET['id'];
-$database = mysqli_connect("'host', 'user', 'pass', 'db-namr'");
+$database = mysqli_connect("'host', 'user', 'pass', 'db-name'");
 $query = mysqli_query($database, "SELECT * FROM `users` WHERE `id`='{$user_iddd}'");
 $aray = mysqli_fetch_array($query);
 if($user_iddd = 17) {
