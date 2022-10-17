@@ -1,6 +1,6 @@
 <?php
 $user_iddd = $_GET['id'];
-$database = mysqli_connect("'localhost', 'root', '', 'register'");
+$database = mysqli_connect("'host', 'user', 'pass', 'db-namr'");
 $query = mysqli_query($database, "SELECT * FROM `users` WHERE `id`='{$user_iddd}'");
 $aray = mysqli_fetch_array($query);
 if($user_iddd = 17) {
@@ -34,10 +34,8 @@ if($user_iddd = 17) {
     ?>
     <p><h1>ID: <?=$user_iddd?></h1></p>
     <p id="term"><h1 id="term">Никнейм: <?=$aray['login']?></h1></p>
-    <p><a href="new_pass.php?id=<?=$user_iddd?>">Сменить Пароль</a></p>
+
     
-    <p class="msg">
-        Теперь пользователи с русским никнеймом (?????) не смогут полностью пользоваться сайтом перейдите в раздел <a href="register">регистрации</a> и создайте новый аккаунт!
-    </p>
+
 </body>
 </html>
